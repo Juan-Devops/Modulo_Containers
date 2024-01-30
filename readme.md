@@ -65,3 +65,11 @@ Abra um browser, e acesse a porta 5000:
 http://localhost:5000
 
 ![localhost](/files/localhost.png)
+
+
+## Observações:
+
+Caso a saida da aplicação na apareã no browser, será necessário restartar os container usando o comando **docker restart** :
+
+![restart](/files/restart.png)
+
