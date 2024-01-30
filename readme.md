@@ -6,36 +6,23 @@
 
 ## Objetivo
 
-Criar duas redes diferentes e realizar a comunicação via ICMP entre uma e outra.
+- Procurar uma aplicação web de exemplo (na linguagem de preferencia de vocês)
 
-### Rede A
+- Trabalhar nesse app com Dockerfile e docker-compose.yaml
 
-- 192.168.0.0/24
-- 192.168.10.254 (Gateway)
-- 192.168.10.253 (DHCP e DNS)
+- O compose precisa conter 1 banco de dados (mysql ou postgresql)
 
-Criação de Outras 4 máquinas (4 pcs e um servidor) dentro da Rede Interna A utilizando DHCP para desktops, e IP fixo para Servidores.
+- Compose precisar conter pelo menos 2 serviços
+- 
+- banco de dados com Volume
 
+- Network (criar e referenciar uma network no compose)
 
-### Rede B
+- O serviço de app precisa ter dependencia do serviço de banco. Ou seja o o banco precisa subir primeiro que o app
 
-- 172.15.0.254/24 
-- 172.15.0.254 (Gateway) 
-- 172.15.0.253 (DHCP e DNS)
-- 172.15.0.252 (Servidor Web)
+- Mostrar a aplicação funcionando na porta 80 localmente.
 
-Criação de Outras 5 máquinas dentro da Rede Interna B (4 pcs e 2 servidores) utilizando DHCP para desktops, e IP fixo para Servidores.
-
-## Equipamentos
-
-- 1 Router 1841
-- 2 Switches 2960 24TT
-- 8 PCs
-- 2 Servers - PT
-- 1 módulo PT-HOST-NM-1CGE
-
-
-O objetivo final, é que um dos Desktops da Rede A, consiga colocar em seu navegador interno, o endereço do Site do Servidor WEB que está na REDE B, e a página possa ser carregada corretamente, validando deste modo o Roteamento entre as Redes, DNS e a camada da Aplicação funcionando corretamente.
+- Plus: Criar stack no swarm com mais de 1 replica.
 
 # Solução:
 ---------
