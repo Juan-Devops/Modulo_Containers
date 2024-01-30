@@ -40,12 +40,12 @@ A saida será mostrada no localhost, na porta 5000.
 tree 
 .
 |-- app
-| |-- Dockerfile 
-| |-- app.py 
-| `-- requirements.txt 
+|   |-- Dockerfile 
+|   |-- app.py 
+|   |-- requirements.txt 
 |-- db 
-| `-- init.sql 
-`-- docker-compose.yml
+|   |-- init.sql 
+-- docker-compose.yml
 ```
 
 ## Configuração
