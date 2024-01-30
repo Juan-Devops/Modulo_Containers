@@ -4,7 +4,7 @@
 ## Aluno:
 - Juan Soto Sotelo
 
-## Objetivo
+## Tarefa
 
 - Procurar uma aplicação web de exemplo (na linguagem de preferencia de vocês)
 
@@ -27,12 +27,65 @@
 # Solução:
 ---------
 
-![Solucao](/files/Projeto_Redes_solucao.png)
+Neste projeto construimos de uma aplicação web Flask com integração a um banco de dados MySQL, usando  o poder do Docker-compose.
 
---->link da nossa [solucao](./Projeto_Redes_Equipe1.pkt)
+Seguindo as instruções do doker-compose, será construido um banco de dados "quadrinhos" e uma tabela "hq".
 
-## Configuração das Redes
+A aplicação acessará a tabela hq que contem os registros de personagens de história em quadrinhos:  Personagem, Autor,Título da primeira publicação,e data de publicação.
+A saida será mostrada no localhost, na porta 5000.
 
+
+## Estrutura do projeto
+```
+tree 
+.
+|-- app
+| |-- Dockerfile 
+| |-- app.py 
+| `-- requirements.txt 
+|-- db 
+| `-- init.sql 
+`-- docker-compose.yml
+```
+
+## Configuração
+
+Verifique se o Docker e o Docker Compose estão instalados na máquina.
+
+## Execução
+
+Na raiz do projeto, execute o comando :
+
+docker-compose up -d
+
+## Testando o Projeto
+
+Abra um browser, e acesse a porta 5000: 
+
+http://localhost:5000
+
+
+## Inicializar Banco de Dados:
+
+URL: http://localhost/inicia
+Descrição: Inicializa o banco de dados.
+
+
+## Inserir Dados de Amostra:
+
+URL: http://localhost/insere
+Descrição: Insere dados de amostra na tabela do banco de dados.
+
+## Deletar dados:
+
+URL: http://localhost/deleta
+Descrição: Deleta todos os dados da tabela do banco de dados.
+
+
+## Consultar Dados:
+
+URL: http://localhost/pesquisa
+Descrição: Recupera e exibe os dados da tabela do banco de dados.
 Rede A:
 -------
 - Monte a rede com 4 PCs, um servidor e um switch na configuração estrela (switch na posição central).
