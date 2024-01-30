@@ -13,7 +13,7 @@
 - O compose precisa conter 1 banco de dados (mysql ou postgresql)
 
 - Compose precisar conter pelo menos 2 serviços
-- 
+  
 - banco de dados com Volume
 
 - Network (criar e referenciar uma network no compose)
